@@ -4,6 +4,8 @@ import Home from './component/Home';
 import About from './component/About';
 import Dashboard from './component/Dashboard';
 import Navbar from './component/Navbar';
+import Courses from './component/Courses';
+import Mocktest from './component/Mocktest';
 const router=createBrowserRouter(
   [
     {
@@ -28,7 +30,18 @@ const router=createBrowserRouter(
       <div>
         <Navbar/>
         <Dashboard/>
-      </div>
+      </div>,
+      children:[
+        {
+          path:"mocktest",
+          element:<Mocktest/>
+        },
+        {
+          path:"courses",
+          element:<Courses/>
+        }
+      ]
+      
     }
   ]
 )
